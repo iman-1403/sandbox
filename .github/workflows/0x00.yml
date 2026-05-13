@@ -234,7 +234,7 @@ jobs:
                 yt-dlp --restrict-filenames --js-runtimes bun:$HOME/.bun/bin/bun $COOKIE_ARG $YTDLP_F -o "tmp_downloads/%(title)s.%(ext)s" "$URL"
               fi
             
-            elif echo "$URL" | grep -qE "(twitch\.tv|reddit\.com|vimeo|soundcloud)"; then
+            elif echo "$URL" | grep -qE "(twitch\.tv|reddit\.com|vimeo|soundcloud|instagram\.com|tiktok\.com|snapchat\.com)"; then
               install_heavy_tools
               COOKIE_ARG=""
               [ -s youtube_cookies.txt ] && COOKIE_ARG="--cookies youtube_cookies.txt"
